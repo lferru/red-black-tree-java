@@ -9,6 +9,12 @@ public class RBNode<T> {
     T key;
     boolean isRed;
 
+    public RBNode() {
+
+        key = null;
+        isRed = false;
+    }
+
     public RBNode(T k) {
 
         key = k;
