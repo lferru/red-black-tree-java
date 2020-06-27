@@ -8,6 +8,7 @@ public class RBNode<T> {
 
     T key;
     boolean isRed;
+    RBNode<T> left, right;
 
     public RBNode() {
 
@@ -19,7 +20,27 @@ public class RBNode<T> {
 
         key = k;
         isRed = true;
+        left = null;
+        right = null;
     }
 
+    public T getKey() {
 
+        return key;
+    }
+
+    public boolean isColourRed() {
+
+        return isRed;
+    }
+
+    public boolean isDaughterless() {
+
+        return left == null && right == null;
+    }
+
+    public void swapColour() {
+
+        isRed = !isRed;
+    }
 }
